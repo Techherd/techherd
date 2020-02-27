@@ -1,27 +1,33 @@
 <template>
-  <div class="headerGrid">
-    <Logo />
+  <div>
+    <div class="logoContainer">
+      <Logo />
+    </div>
+    <SmallLogo />
     <Navigation />
   </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import SmallLogo from '~/components/SmallLogo.vue'
 import Navigation from '~/components/Navigation.vue'
 
 export default {
   components: {
     Logo,
-    Navigation
+    Navigation,
+    SmallLogo
   }
 }
 </script>
 
 
 <style scoped>
-.headerGrid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+.logoContainer {
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
 }
 </style>
 
