@@ -29,7 +29,7 @@ jobs:
         # FTP password
         password: Ndh34kd8!@djs
         # Local directory
-        localDir: /dist
+        localDir: ./dist
         # Remote directory
         remoteDir: ./
       env:
