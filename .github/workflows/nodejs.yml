@@ -1,0 +1,36 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run generate --if-present
+    - name: ftp-action
+      uses: sebastianpopp/ftp-action@v1.1.0
+      with:
+        # FTP host
+        host: ftp.techherd.co
+        # FTP user
+        user: deployuser
+        # FTP password
+        password: Ndh34kd8!@djs
+        # Local directory
+        localDir: /dist
+        # Remote directory
+        remoteDir: ./
+      env:
+        CI: true
