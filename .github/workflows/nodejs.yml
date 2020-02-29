@@ -23,14 +23,14 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
         # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-        ftp-server: ftp.techherd.co
+        ftp-server: ftp://ftp.techherd.co/
         # FTP account username
         ftp-username: deployuser
         # FTP account password
         ftp-password: Ndh34kd8!@djs
         # The local folder to copy, defaults to root project folder
-        local-dir: ./dist
+        local-dir: dist/
         # Passes through options into git-ftp
-        git-ftp-args: # optional
+        git-ftp-args: --insecure
       env:
         CI: true
