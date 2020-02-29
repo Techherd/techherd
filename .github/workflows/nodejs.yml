@@ -27,7 +27,7 @@ jobs:
         # FTP account username
         ftp-username: deployuser
         # FTP account password
-        ftp-password: Ndh34kd8!@djs
+        ftp-password: Ndh34kd8@djs
         # The local folder to copy, defaults to root project folder
         local-dir: dist/
         # Passes through options into git-ftp
