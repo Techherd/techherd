@@ -1,7 +1,5 @@
 <template>
   <div class="pageContainer">
-    <div class="boxTest"></div>
-    <nuxt-link to="servicesb">Go</nuxt-link>
     <h2 class="title" v-html="page.title.rendered"></h2>
     <div v-html="page.content.rendered"></div>
   </div>

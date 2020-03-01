@@ -44,15 +44,18 @@
     <div class="contentWidth">
       <nuxt />
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   },
   computed: {
     page() {
@@ -173,7 +176,7 @@ body {
 }
 
 .slide-left-enter-active {
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 .slide-left-leave-active {
@@ -192,7 +195,7 @@ body {
 
 .slide-right-enter-active,
 .slide-right-leave-active {
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 #stars,
@@ -1323,7 +1326,8 @@ a:link {
 }
 
 .contact {
-  a.button {
+  a.button,
+  button {
     background: rgb(223, 153, 31);
     background: linear-gradient(
       133deg,
@@ -1333,12 +1337,26 @@ a:link {
     box-shadow: 0px 4px 12px rgba(223, 153, 31, 0.468);
   }
 
-  a.button:hover {
+  a.button:hover,
+  button:hover {
     box-shadow: 0px 5px 18px rgba(223, 153, 31, 0.8);
+  }
+
+  button,
+  button:hover {
+    padding: 0.6rem;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.7rem;
+    margin: 0 auto;
+    display: block;
   }
 }
 
-a.button {
+a.button,
+button {
   display: inline-block;
   border-radius: 50rem;
   font-size: 1.1rem;
@@ -1357,7 +1375,8 @@ a.button {
   transition: 0.4s;
 }
 
-a.button:hover {
+a.button:hover,
+button:hover {
   transform: translateY(-2px);
   padding-bottom: 2px;
   box-shadow: 0px 5px 18px rgba(19, 137, 240, 0.8);
