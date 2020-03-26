@@ -1,6 +1,6 @@
-export default function(context) {
+export default function (context) {
   // go tell the store to update the page
-  console.log(context.route)
+  //console.log(context.route)
 
   if (context.route.params.pageslug) {
     context.store.commit(

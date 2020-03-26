@@ -1411,10 +1411,6 @@ button:hover {
   min-height: 1000px;
 }
 
-.pageWidth {
-  width: 100vw;
-}
-
 .contentWidth {
   max-width: 1200px;
   margin: 0 auto;
@@ -1463,6 +1459,7 @@ button:hover {
   z-index: -1;
   width: 75%;
   max-width: 1300px;
+  overflow: hidden;
 
   .vertical-centered-box {
     position: absolute;
