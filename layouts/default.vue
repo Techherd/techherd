@@ -1368,6 +1368,8 @@ button {
   );
 
   margin-left: 1rem;
+  color: #fff;
+  text-decoration: none;
   padding: 0.6rem;
   padding-left: 0.9rem;
   padding-right: 0.9rem;
@@ -1378,7 +1380,7 @@ button {
 a.button:hover,
 button:hover {
   transform: translateY(-2px);
-  padding-bottom: 2px;
+
   box-shadow: 0px 5px 18px rgba(19, 137, 240, 0.8);
 }
 
