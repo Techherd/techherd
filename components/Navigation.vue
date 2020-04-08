@@ -57,11 +57,17 @@ export default {
       justify-content: space-between;
 
       li {
+        padding: 0px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
         a {
           color: #000;
         }
         a.button {
           color: #fff;
+          margin-right: 8px;
+          margin-left: 8px;
         }
       }
     }
