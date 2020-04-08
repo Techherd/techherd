@@ -301,6 +301,16 @@
   </div>
 </template>
 <style scoped>
+@media screen and (max-width: 600px) {
+  div.logo {
+    top: 80px;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 70%;
+  }
+}
+
 .logo {
   max-width: 280px;
   max-height: 350px;

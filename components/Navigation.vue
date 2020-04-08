@@ -33,6 +33,41 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (max-width: 1000px) {
+  div.navContainer {
+    right: 3%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .homeHeader div.navContainer {
+    position: fixed;
+    bottom: 0px;
+    top: unset;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px -1px 16px rgba(0, 0, 0, 0.08);
+    z-index: 20;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        a {
+          color: #000;
+        }
+        a.button {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
 .navContainer {
   position: absolute;
   right: 15%;

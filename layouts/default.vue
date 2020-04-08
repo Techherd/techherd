@@ -1515,6 +1515,12 @@ button:hover {
   height: 600px;
 }
 
+@media screen and (max-width: 600px) {
+  .frontpage .homeHeader {
+    height: 400px;
+  }
+}
+
 .homeHeader {
   height: 140px;
 }
@@ -1528,6 +1534,13 @@ button:hover {
   margin: 0 auto;
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .contentWidth {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .button--green {
@@ -1630,6 +1643,26 @@ button:hover {
 
     .graphic svg * {
       transition: 0.4s;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .headerBg {
+    .blueSash {
+      .text {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headerBg {
+    .blueSash {
+      .text {
+        display: none;
+      }
     }
   }
 }

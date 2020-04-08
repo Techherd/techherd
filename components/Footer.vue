@@ -31,6 +31,17 @@ footer {
   color: rgba(0, 0, 0, 0.6);
 }
 
+@media screen and (max-width: 600px) {
+  div.footerInner {
+    display: block;
+    padding-bottom: 3rem;
+  }
+
+  .location {
+    display: none;
+  }
+}
+
 .footerInner {
   margin: 0 auto;
   max-width: 1200px;

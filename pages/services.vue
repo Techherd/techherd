@@ -8,7 +8,7 @@
     <section>
       <div class="largeCallout">
         <div>We can help.</div>
-        <nuxt-link to="/contact" class="button">Contact Us</nuxt-link>
+        <nuxt-link to="/contact" class="button">Reach Out</nuxt-link>
       </div>
     </section>
 
@@ -121,6 +121,19 @@ section {
 
 .serviceBox:nth-child(even) {
   grid-template-areas: 'txt txt txt pic pic';
+}
+
+@media screen and (max-width: 600px) {
+  div.serviceBox,
+  .serviceBox:nth-child(even) {
+    grid-template-areas:
+      'pic pic'
+      'txt txt';
+  }
+
+  img {
+    min-height: 100px;
+  }
 }
 
 .serviceBox {
