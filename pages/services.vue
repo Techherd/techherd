@@ -65,12 +65,7 @@
 <script>
 export default {
   name: 'Services',
-  transition(to, from) {
-    if (!from) {
-      return 'slide-left'
-    }
-    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
-  }
+  transition: 'fade'
 }
 </script>
 

@@ -7,7 +7,7 @@ export const state = () => ({
 export const mutations = {
   updatePage(state, pageName) {
     state.page = pageName
-    if (pageName == 'news') {
+    if (pageName == 'news' || pageName == 'blog-slug') {
       state.color = '#C043CB'
       state.color2 = '#0C1192'
     } else if (pageName == 'services') {

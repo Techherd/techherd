@@ -1,6 +1,6 @@
 <template>
   <div class="blogContainer">
-    <nuxt-link to="/" class="backTo">
+    <nuxt-link to="/news" class="backTo">
       <svg
         height="32px"
         id="Layer_1"
@@ -18,8 +18,18 @@
         />
       </svg>
     </nuxt-link>
-    <h2 class="title" v-html="post.title.rendered"></h2>
-    <div v-html="post.content.rendered"></div>
+
+    <div class="blogContent">
+      <div class="featuredSlice" v-if="post._embedded['wp:featuredmedia']">
+        <img :src="post._embedded['wp:featuredmedia']['0'].media_details.sizes.large.source_url" />
+      </div>
+
+      <div class="blogTextBody">
+        <h2 class="title" v-html="post.title.rendered"></h2>
+        <div class="date">{{ post.date }}</div>
+        <div v-html="post.content.rendered" class="text"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -28,6 +38,7 @@
 
 export default {
   name: 'SinglePost',
+  transition: 'bounce',
   computed: {
     post() {
       return this.$store.getters['getposts/getPostWithSlug'](
@@ -40,3 +51,52 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" >
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+
+.blogContent {
+  background: #fff;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.15);
+
+  .blogTextBody {
+    padding: 3rem;
+  }
+
+  .featuredSlice {
+    img {
+      max-height: 250px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  h2 {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 2rem;
+
+    font-family: 'Saira Semi Condensed';
+  }
+
+  .date {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Open Sans';
+
+    p {
+      line-height: 1.5;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.9);
+    }
+  }
+}
+</style>

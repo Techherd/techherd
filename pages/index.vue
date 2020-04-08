@@ -88,6 +88,7 @@ import SupportIcon from '~/components/icons/SupportIcon.vue'
 import VideoIcon from '~/components/icons/VideoIcon.vue'
 
 export default {
+  transition: 'fade',
   components: {
     Logo,
     SpeakerIcon,

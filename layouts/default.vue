@@ -198,6 +198,115 @@ body {
   transition: 0.3s;
 }
 
+.slide-left-enter {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.slide-left-leave {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.zoom-in-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.zoom-in-leave-to {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.zoom-in-enter-active {
+  transition: 0.5s;
+}
+
+.zoom-in-leave-active {
+  transition: 0.3s;
+}
+
+.zoom-out-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.zoom-out-leave-to {
+  opacity: 0;
+  transform: scale(1.3);
+}
+
+.zoom-out-enter-active {
+  transition: 0.5s;
+}
+
+.zoom-out-leave-active {
+  transition: 0.3s;
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.4s;
+}
+.bounce-leave-active {
+  animation: bounce-out 0.4s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+.fade-enter-active {
+  animation: fade-in 0.4s;
+}
+.fade-leave-active {
+  animation: fade-out 0.4s;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
 #stars,
 #stars2,
 #stars3 {
@@ -1293,7 +1402,8 @@ a:link {
   color: #0c1192;
 }
 
-.news {
+.news,
+.blog-slug {
   a.button {
     background: rgb(71, 42, 214);
     background: linear-gradient(

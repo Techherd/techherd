@@ -9,12 +9,7 @@
 import Blog from '../components/Blog.vue'
 export default {
   name: 'News',
-  transition(to, from) {
-    if (!from) {
-      return 'slide-left'
-    }
-    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
-  },
+  transition: 'fade',
   components: {
     Blog
   },
