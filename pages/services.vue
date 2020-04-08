@@ -7,7 +7,7 @@
 
     <section>
       <div class="largeCallout">
-        <div>If you are interested in our services.</div>
+        <div>We can help.</div>
         <nuxt-link to="/contact" class="button">Contact Us</nuxt-link>
       </div>
     </section>

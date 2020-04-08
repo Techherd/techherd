@@ -9,6 +9,30 @@
       <div class="techherdHighlights">
         <div class="highlightItem">
           <div class="icon">
+            <DesignIcon />
+          </div>
+          <h3>Design</h3>
+          <p>Business Stationary, Logos and Website Design</p>
+        </div>
+
+        <div class="highlightItem">
+          <div class="icon">
+            <DevelopmentIcon />
+          </div>
+          <h3>Web Development</h3>
+          <p>Custom website development</p>
+        </div>
+
+        <div class="highlightItem">
+          <div class="icon">
+            <HostingIcon />
+          </div>
+          <h3>Web Hosting</h3>
+          <p>As a leader in Wisconsin website hosting, we offer affordable web hosting, shared hosting, cloud hosting, virtual/dedicated servers.</p>
+        </div>
+
+        <div class="highlightItem">
+          <div class="icon">
             <SpeakerIcon />
           </div>
           <h3>Audio/Visual</h3>
@@ -25,34 +49,10 @@
 
         <div class="highlightItem">
           <div class="icon">
-            <DesignIcon />
-          </div>
-          <h3>Design</h3>
-          <p>Business Stationary, Logos and Website Design</p>
-        </div>
-
-        <div class="highlightItem">
-          <div class="icon">
             <NetworkIcon />
           </div>
           <h3>Network Solutions</h3>
           <p>Tech Herd provides hi-performance scalable cable and wireless network solutions for data and voice systems.</p>
-        </div>
-
-        <div class="highlightItem">
-          <div class="icon">
-            <HostingIcon />
-          </div>
-          <h3>Web Hosting</h3>
-          <p>As a leader in Wisconsin website hosting, we offer affordable web hosting, shared hosting, cloud hosting, virtual/dedicated servers.</p>
-        </div>
-
-        <div class="highlightItem">
-          <div class="icon">
-            <DevelopmentIcon />
-          </div>
-          <h3>Web Development</h3>
-          <p>Custom website development</p>
         </div>
 
         <div class="highlightItem">
