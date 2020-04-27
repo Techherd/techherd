@@ -2,7 +2,8 @@
   <div class="pageContainer">
     <h2 class="title">Contact</h2>
     <p>Get in touch with us if you have questions or are interested in hiring us.</p>
-    <form name="contact" netlify>
+    <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
       <p>
         <label>
           Name
